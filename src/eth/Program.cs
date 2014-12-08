@@ -44,9 +44,12 @@ class Program
 
    static void Main(string[] args)
    {
-      Program p = new Program();
+      using (new SimpleTimer())
+      {
+         Program p = new Program();
 
-      p.Run(args);
+         p.Run(args);
+      }
    }
 
    void Run(string[] args)

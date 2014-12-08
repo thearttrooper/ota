@@ -14,8 +14,19 @@ class SimpleTimer : IDisposable
 
    public SimpleTimer(Action<Stopwatch> action = null)
    {
-      _action = action ?? (s => Console.WriteLine(s.ElapsedMilliseconds));
-      _stopwatch = new Stopwatch();
+      _action = action ?? (s =>
+      {
+         TimeSpan delta = s.Elapsed;
+
+         Console.WriteLine();
+         Console.WriteLine(
+             "Time taken: {0:00}:{1:00}:{2:00}.{3:00}",
+             delta.Hours,
+             delta.Minutes,
+             delta.Seconds,
+             delta.Milliseconds / 10);
+      });
+       _stopwatch = new Stopwatch();
       _stopwatch.Start();
    }
 
