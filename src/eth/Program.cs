@@ -1,9 +1,8 @@
 ﻿// Program.cs
 //
 // Illustrates how to use the HP OTA to export the Test Lab hierarchy
-// to a CSV-formatted file.
-//
-// Chris Trueman
+// to a CSV-formatted file. Supports writing optional TSTest object
+// properties (using the label as the specifier).
 //
 
 using System;
