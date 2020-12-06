@@ -2,7 +2,7 @@ Populate this directory locally as follows:
 
 <OTA VERSION>\
   OTACLIENT.DLL
-  WEBCLIENT>DLL
+  WEBCLIENT.DLL
 
 For example:
 
